@@ -19,6 +19,7 @@ RUN asdf install nodejs $NODEJS_VERSION
 
 ARG ERLANG_VERSION
 ENV ERLANG_VERSION $ERLANG_VERSION
+COPY otp_src_$ERLANG_VERSION.tar.gz /root/.kerl/archives/otp_src_$ERLANG_VERSION.tar.gz
 RUN asdf install erlang $ERLANG_VERSION
 
 ARG ELIXIR_VERSION
