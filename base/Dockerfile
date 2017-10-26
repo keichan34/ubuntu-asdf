@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt-get update -q && \
-    apt-get install -y git curl build-essential libssl-dev zip unzip dpkg-dev && \
+    apt-get install -y git curl build-essential libssl-dev zip unzip dpkg-dev openssh-client ca-certificates && \
     rm -rf /var/lib/apt/lists/*
 
 ENV PATH="/root/.asdf/shims:/root/.asdf/bin:${PATH}"
