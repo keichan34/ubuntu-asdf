@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt-get update -q && \
-    apt-get install -y git curl build-essential libssl-dev zip unzip dpkg-dev && \
+    apt-get install -y git curl build-essential libssl-dev zip unzip dpkg-dev \
       openssh-client ca-certificates python2.7 python-pip && \
     rm -rf /var/lib/apt/lists/*
 
